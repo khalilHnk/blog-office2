@@ -11,14 +11,16 @@ body,.bloc,.bloc *{
 }
 .bloc{
     text-align:center;
+    border:20px solid #000;
     min-height:100vh
 }
 .bloc>header,.bloc>footer{
     flex-basis:100px;
     padding:1em
 }
-article{
-    font-size:20px
+.bloc article{
+    font-size:20px;
+    margin:0 auto
 }
 ul{
     display:flex;
