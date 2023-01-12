@@ -21,8 +21,8 @@ body,.bloc,.bloc *{
     padding:1em
 }
 .bloc article{
-    font-size:20px;
-    margin:0 auto
+    outline:2px solid rgba(0,0,0,.8);
+    font-size:20px
 }
 ul{
     display:flex;
