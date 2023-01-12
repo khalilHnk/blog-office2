@@ -21,7 +21,7 @@ window
             console.warn('cancelled : main is not a function');
             return;
         }
-        console.log(`WINDOW : ${e.type} : ${e.timeStamp.toFixed(2)} ms`);
+        console.log(`WINDOW : ${evt.type} : ${evt.timeStamp.toFixed(2)} ms`);
         document
         .getElementById('oct')
         ?.addEventListener(
