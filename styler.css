@@ -1,83 +1,81 @@
-body,.bloc,.bloc *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box
+body>div *, ::before, ::after{
+    visibility:visible;
+    opacity:1
 }
-.bloc,li{
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between
-}
-.bloc{
-    align-items:center;
-    text-align:center;
-    border:20px solid #000;
-    min-height:100vh
-}
-.bloc>header,.bloc>footer{
-    background-color:rgba(255,255,0,.2);
-    width:100%;
-    flex-basis:100px;
-    padding:1em
-}
-article{
-    outline:2px solid rgba(0,0,0,.8);
-    font-size:20px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center
-}
-ul{
-    display:flex;
-    flex-flow:row wrap;
-    justify-content:center;
-    align-items:center;
-    font-size:1em;
+body{
     position:relative
 }
-li{
-    align-items:stretch;
+#protector{
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    background-color: rgba(255,255,0,.2);
+    z-index:99999999
+}
+#disp{
     z-index:1;
-    cursor:pointer;
-    outline:1px solid rgba(0,0,0,.8);
-    width:2.5em;
-    height:5em
 }
-li:hover{
-    z-index:2;
-    outline:2px solid grey
+body,.bloc,.bloc *{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
 }
-li.act{
-    background-color:#000;
-    color:white
+header,footer,article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position:relative
 }
-li::after{
-    order:2;
-    content:"O"
+.bloc{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    min-height:100vh;
+    border:10px solid #000;
+    background-color: #ccc;
 }
-li.act::after{
-    content:"I"
+noscript{
+    position:absolute;
+    bottom:0;
+    outline:1px dashed red
 }
-li::before{
-    order:1;
-    content:attr(data-ord)
+#prg{
+    outline:1px dotted green;
 }
-li::before,i{
-    font-size:.7em
+header,footer{
+    word-break: break-all;
+    flex-basis: 50px;
+    background-color: rgba(255,255,0,.2);
 }
-i{
-    order:3;
-    font-style:normal
-}
-i::after{
-    display:block;
-    content:attr(data-exp)
-}
-.bloc ul+p{
+article{
     width:100%;
-    height:2em;
-    padding:5px;
-    margin:.5em 0;
-    font-size:2em
+    outline:2px solid rgba(0,0,0,.2);
+    position:relative
+}
+#cnv{
+    z-index: 1;
+}
+canvas{
+    outline:2px solid red;
+    outline-offset: -10px;
+    display:block;
+
+}
+#plan{
+    opacity:.5;
+    cursor: pointer;
+    position: absolute;
+    z-index: 4;
+    background-color: rgba(0,128,0,0.2);
+    /*border-radius:50%;*/
+    outline:1px solid green;
+    width:400px;
+    height: 400px; 
+}
+#plan:focus{
+    opacity: 1;
 }
