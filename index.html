@@ -2,35 +2,30 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="description" content="binary to decimal converter">
+        <meta name="description" content="Trigonometry Application">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preload" href="./styler.css" as="style">
-        <link rel="stylesheet" href="./styler.css">
-        <link rel="shortcut icon" type="image/x-icon" href="./logo8.ico">
-        <title>Document</title>
+        <link rel="stylesheet" href="./style.css">
+        <!--<link rel="shortcut icon" type="image/x-icon" href="./logo8.ico">-->
+        <title>Trigonometry</title>
     </head>
     <body>
-        <div class="bloc">
+        <div id="protector"></div>
+        <div class="bloc" id="disp">
             <header>
-                <h1>Program-Blog</h1>
+                <h1>TRIGONOMETRY</h1>
+                <p id="prg">&horbar;</p>
+                <noscript><pre>javascript must be enabled</pre></noscript>                
             </header>
             <article>
-                <ul id="oct">
-                    <li data-ord="7"><i data-exp="128"></i></li>
-                    <li data-ord="6"><i data-exp="64"></i></li>
-                    <li data-ord="5"><i data-exp="32"></i></li>
-                    <li data-ord="4"><i data-exp="16"></i></li>
-                    <li data-ord="3"><i data-exp="8"></i></li>
-                    <li data-ord="2"><i data-exp="4"></i></li>
-                    <li data-ord="1"><i data-exp="2"></i></li>
-                    <li data-ord="0"><i data-exp="1"></i></li>
-                </ul>
-                <p>&horbar;</p>
+                <div id="cnv">
+                    <canvas width="500" height="500"></canvas>
+                </div>
+                <i id="plan" tabindex="0"></i>
             </article>
             <footer>
-                <p>program-blog<sup>280</sup> &copy;2023</p>
+                <p>TrigonometryJS8&copy;2023</p>
             </footer>
         </div>
-        <!--<script src="./mainv.js" defer></script>-->
+        <script src="./xrtest.js" defer></script>
     </body>
 </html>
