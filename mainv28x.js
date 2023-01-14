@@ -4,7 +4,7 @@
     if (!p) {
         return;
     }
-    p.textContent = `WINDOW: w: ${window.innerWidth} x h: ${window.innerHeight} / touch ? (${navigator.maxTouchPoints > 1 ? 'multi-touch' : 'no__touch'})`;
+    p.textContent = `WINDOW: w: ${window.innerWidth} x h: ${window.innerHeight} / touch ? (${navigator.maxTouchPoints > 1 ? 'yes' : 'no'})`;
     const box = document.getElementById('plan');
     const ctx = document.getElementById('cnv')?.querySelectorAll('canvas')[0].getContext('2d');
     if (!(box instanceof HTMLElement && ctx instanceof CanvasRenderingContext2D)) {
@@ -39,6 +39,11 @@
             box.addEventListener(
                 'mouseup' ,
                 (e) => {
+                    if (navigator.maxTouchPoints > 1) {
+                       p.textcontent = 'TOUCH_SCREEN';
+                    } else {
+                       p.textcontent = 'normal_screen';
+                    }
                     const rect = box.getBoundingClientRect();
                     // window_area : rect.x & e.clientX : from the window_left_edge :
                     // window_area : rect.y & e.clientY : from the window_top_edge
