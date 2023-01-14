@@ -32,6 +32,7 @@
     };
     handleChange(mediaQueryList);
     mediaQueryList.addEventListener('change' , handleChange);
+    let ii = 0;
     window
     .addEventListener(
         'load' ,
@@ -40,10 +41,11 @@
                 'mouseup' ,
                 (e) => {
                     if (navigator.maxTouchPoints > 1) {
-                       p.textcontent = 'TOUCH_SCREEN';
+                       p.textContent = `TOUCH_SCREEN : ${ii}`;
                     } else {
-                       p.textcontent = 'normal_screen';
+                       p.textContent = `normal_screen : ${ii}`;
                     }
+                    ii++;
                     const rect = box.getBoundingClientRect();
                     // window_area : rect.x & e.clientX : from the window_left_edge :
                     // window_area : rect.y & e.clientY : from the window_top_edge
