@@ -28,6 +28,7 @@
         ctx.transform(1 , 0 , 0 , -1 , obj.w / 2 , obj.w / 2);
         box.style.width  = `${obj.r}px`;
         box.style.height = `${obj.r}px`;
+        console.log(obj);
     };
     handleChange(mediaQueryList);
     mediaQueryList.addEventListener('change' , handleChange);
