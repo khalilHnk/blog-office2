@@ -2,12 +2,6 @@ body>div *, ::before, ::after{
     visibility:visible;
     opacity:1
 }
-body{
-    position:relative
-}
-#disp{
-    z-index:1;
-}
 body,.bloc,.bloc *{
     margin:0;
     padding:0;
@@ -24,7 +18,7 @@ header,footer,article{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     min-height:100vh;
     background-color: #ccc;
 }
@@ -36,34 +30,13 @@ noscript{
     outline:1px dotted green;
 }
 header,footer{
-    width:100%;
     word-break: break-all;
-    flex-basis: 50px;
+    flex-basis: 80px;
     background-color: rgba(255,255,0,.2);
 }
 article{
+    flex-grow:1;
     outline:2px solid rgba(0,0,0,.2);
+    outline-offset:-2px;
     position:relative
-}
-#cnv{
-    z-index: 1;
-}
-canvas{
-    outline:2px solid red;
-    outline-offset: -2px;
-    display:block;
-}
-#plan{
-    opacity:.5;
-    cursor: pointer;
-    position: absolute;
-    z-index: 4;
-    background-color: rgba(0,128,0,0.2);
-    border-radius:50%;
-    width:400px;
-    height:400px;
-    outline:1px solid green
-}
-#plan:focus{
-    opacity: 1;
 }
